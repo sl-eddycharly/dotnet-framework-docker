@@ -1,6 +1,6 @@
 # escape=`
 
-FROM microsoft/windowsservercore:1709
+FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709
 
 # Install .NET Fx 3.5
 RUN powershell -Command `
@@ -31,7 +31,5 @@ RUN powershell -Command `
 
 # ngen .NET Fx
 RUN set COMPLUS_NGenProtectedProcess_FeatureEnabled=0 & `
-    \Windows\Microsoft.NET\Framework64\v4.0.30319\ngen update & `
-    \Windows\Microsoft.NET\Framework\v4.0.30319\ngen update & `
     \Windows\Microsoft.NET\Framework64\v2.0.50727\ngen update & `
     \Windows\Microsoft.NET\Framework\v2.0.50727\ngen update
