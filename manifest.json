@@ -10,7 +10,7 @@
   },
   "repos": [
     {
-      "name": "microsoft/dotnet-framework",
+      "name": "msimons/dotnet-framework",
       "readmePath": "README.md",
       "images": [
         {
@@ -260,7 +260,7 @@
       ]
     },
     {
-      "name": "microsoft/dotnet-framework-build",
+      "name": "msimons/dotnet-framework-build",
       "readmePath": "README.dotnet-framework-build.md",
       "images": [
         {
