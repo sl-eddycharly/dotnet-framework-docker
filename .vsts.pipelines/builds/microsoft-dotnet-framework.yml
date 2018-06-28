@@ -1,11 +1,14 @@
 phases:
-  - template: ../phases/build-all.yml
-    parameters:
-      repo: dotnet-framework
-      matrixWindowsSac2016Amd64:
-        Build_3_5:
-          buildPath: 3.5*
-          osVersion: nanoserver-sac2016
+  - phase: build
+    steps:
+    - script: echo hello
+#  - template: ../phases/build-all.yml
+#    parameters:
+#      repo: dotnet-framework
+#      matrixWindowsSac2016Amd64:
+#        Build_3_5:
+#          buildPath: 3.5*
+#          osVersion: nanoserver-sac2016
 #        Build_4_6_2:
 #          buildPath: 4.6.2*
 #          osVersion: nanoserver-sac2016
