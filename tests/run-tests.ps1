@@ -7,7 +7,8 @@
 param(
     [string]$VersionFilter,
     [string]$OSFilter,
-    [string]$RepoOwner
+    [string]$Repo,
+    [switch]$IsLocalRun
 )
 
 Set-StrictMode -Version Latest
@@ -32,7 +33,7 @@ if ($LASTEXITCODE -ne 0) { throw "Failed to install the .NET Core SDK" }
 # Run Tests
 $env:IMAGE_OS_FILTER = $OSFilter
 $env:IMAGE_VERSION_FILTER = $VersionFilter
-$env:REPO_OWNER = $RepoOwner
+$env:REPO = $Repo
 
 & dotnet test -c Release -v n $PSScriptRoot/Microsoft.DotNet.Framework.Docker.Tests/Microsoft.DotNet.Framework.Docker.Tests.csproj
 if ($LASTEXITCODE -ne 0) { throw "Tests Failed" }

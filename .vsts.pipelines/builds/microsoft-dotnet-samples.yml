@@ -1,0 +1,26 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - samples/*
+      - manifest.samples.json
+phases:
+  - template: ../phases/build-all.yml
+    parameters:
+      excludeTests: true
+      manifest: manifest.samples.json
+      repo: dotnet-framework-samples
+      matrixWindowsSac2016Amd64:
+        Build:
+          buildPath: '*'
+          osVersion: nanoserver-sac2016
+      matrixWindows1709Amd64:
+        Build:
+          buildPath: '*'
+          osVersion: nanoserver-1709
+      matrixWindows1803Amd64:
+        Build:
+          buildPath: '*'
+          osVersion: nanoserver-1803
