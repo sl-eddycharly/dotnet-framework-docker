@@ -6,17 +6,17 @@ phases:
         Build_3_5:
           buildPath: 3.5*
           osVersion: nanoserver-sac2016
+        Build_4_6_2:
+          buildPath: 4.6.2*
+          osVersion: nanoserver-sac2016
+        Build_4_7:
+          buildPath: 4.7*
+          osVersion: nanoserver-sac2016
         Build_4_7_1:
           buildPath: 4.7.1*
           osVersion: nanoserver-sac2016
         Build_4_7_2:
           buildPath: 4.7.2*
-          osVersion: nanoserver-sac2016
-        Build_4_6_2:
-          buildPath: 4.6.2*
-          osVersion: nanoserver-sac2016
-        Build_4_6:
-          buildPath: 4.6*
           osVersion: nanoserver-sac2016
       matrixWindows1709Amd64:
         Build_3_5:
